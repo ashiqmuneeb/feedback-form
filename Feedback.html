@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
+    
+    
+    <style>
+        .form-bg {
+            border: 5px solid #ccc;
+            padding: 30px;
+            margin-bottom: 10px;
+            display: flex;
+             flex-wrap: wrap;
+        }
+
+.form-bg label,
+.form-bg input,
+.form-bg select,
+.form-bg textarea,
+.form-bg .right-section {
+    flex: 1 1 45%; 
+    margin-bottom: 10px;
+}
+             
+.right-section img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+    </style>
+    </head>
+<body>
+    <form  action="process_form.php" method="post">
+        <div class="form-bg">
+    <label>Username:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter Your Username" required><br><br>
+
+    <label>Email Address:</label><br>
+    <input type="Email" id="email" name="email" placeholder="Enter Your Email" required>
+    <br><br>
+    <label for="issue">Select the type of issue:</label><br>
+    <Select id="issue" name="issue">
+        <option value="Query">Query</option>
+        <option value="Feedback">FeedBack</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Other">Other</option></Select><br>
+        <br>
+        <label for="Comment">Please Provide Details:</label><br>
+        <textarea id="comment" name="comment" rows="5"></textarea><br><br>
+        <div class="right-section">
+            <img src="https://cdn.elearningindustry.com/wp-content/uploads/2015/12/7-tips-to-create-an-effective-constructive-feedback-system-for-elearning-1024x577.jpg" id="img">
+        </div>
+     <input type="submit" value="submit">
+        </div>       
+       
+</form>
+<p> A feedback form is a way to collect opinions about your company's service. The goal is to gain a better understanding of the overall customer experience so you can identify areas for improvement.</p>
+
+<script>
+$document.ready(function(){
+    $('#comment').summernote({
+        height:150,
+        toolbar:[
+            ['style',['bold','italic','underline','clear']],
+            ['font',['strikethrough','superscript','subscript']],,
+            ['para',['ul','ol','paragraph']],
+            ['height',['height']]
+        ]
+    });
+});
+</script>
+  </body>
+</html>

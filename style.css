@@ -1,0 +1,30 @@
+/* Basic CSS for form and submission display (can be extended) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  .submitted-data {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .comment-display {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
